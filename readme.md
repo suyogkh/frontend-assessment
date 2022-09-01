@@ -1,40 +1,29 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+# Frontend Assessment
 
-Exercise 1
----
-Build a responsive page based on the designs.
+> Both completed task can be found on their respective folder `exercise-1` and `exercise-2`
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+## Exercise 1
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+This task has been completed using the expressJS. I have used basic HTML and SCSS along with the bootstrap-5 (CSS) only to complete the task. Since its a basic HTML, inorder to complile SCSS I have used a node-sass module, which will compile the SCSS and generate the minified version of CSS.
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+Inorder to run the exercise 1 please navigate to exercise 1's folder using your terminal `cd exercise-1` and once you are in the exercise folder please type `npm i` to install all of the required packages. Once completed please run `npm run dev` to run the dev server, which will be available on `http://localhost:3000` if you want to change the port please update `PORT` value on `/src/pre-start/env/development.env`
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+## Exercise 2
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+This task has been completed using the VueJS-3.
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+Inorder to run the exercise 2 please navigate to exercise 2's folder using your terminal `cd exercise-2` and once you are in the exercise folder please type `npm i` to install all of the required packages. Once completed please run `npm run dev` to run the dev server, which will be available on `http://localhost:5173`.
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+## Bonus Question
+
+Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`
+
+**Answer:**
+The first b and a added up as ba `('ba' + + 'a' + 'a')`. Now the `+ +` that we can see before the second a, the first one is for the concatenation and second one is to convert string to a number. For example if you run the following code:
+
+```
+const a = +"10";
+typeof a
+```
+
+It will output the type as a `number`. Since the value that we have provided isn't a number, it will return the value as NaN (not a number). After the conversion our code look like this `('ba' + 'NaN' + 'a')` which will concate to a value `baNaNa`. Finally `toLowerCase()` which will lowercased the value into `banana`
