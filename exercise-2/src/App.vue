@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <Accordion />
+    <AppAccordion />
   </div>
 </template>
 
 <script>
 import tabData from "@/assets/data.json";
-import Accordion from "@/components/Accordion/Accordion.vue";
+import AppAccordion from "@/components/AppAccordion/AppAccordion.vue";
 
 export default {
   name: "App",
   components: {
-    Accordion,
+    AppAccordion,
   },
   data() {
     return {
